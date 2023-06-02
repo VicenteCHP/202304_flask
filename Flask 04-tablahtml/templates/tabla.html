@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Tabla
+{% endblock %}
+
+{% block contenido %}
+<h1>Tabla</h1>
+
+<table class="table table-hover mt-4"
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nombre Completo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Michell</td>
+            <td>Choi</td>
+            <td>Michael Choi</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Supsupin</td>
+            <td>John Supsupin</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Mark</td>
+            <td>Guillen</td>
+            <td>Mark Guillen</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
