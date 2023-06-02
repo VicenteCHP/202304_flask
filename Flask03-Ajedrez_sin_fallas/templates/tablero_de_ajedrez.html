@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head_title %}Tablero de ajedrez{% endblock %}
+
+{% block style_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tablero_de_ajedrez.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h2>Tablero de ajedrez</h2>
+
+    <div class="container">
+        <table>
+            <tbody>
+                {% for i in range(0, fila) %}
+                    <tr>
+                        {% for j in range(0, columna) %}
+                            {% if (i % 2 == 0 and j % 2 == 0) or (i % 2 != 0 and j % 2 != 0) %}
+                                <td style="background-color: {{color_uno}};"></td>
+                            {% else %}
+                                <td style="background-color: {{color_dos}};"></td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
