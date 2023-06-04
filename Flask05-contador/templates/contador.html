@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_title %}Contador{% endblock %}
+
+{% block style_css %}{% endblock %}
+
+{% block content %}
+    <h2>Contador</h2>
+    <p>{{ session["contador"] }}</p>
+
+    <div>
+        <a href="/contador">Click</a>
+        <a href="/destroy_session">Reset</a>
+        <a href="/incrementa_en_dos">Incrementa en dos</a>
+    </div>
+
+{% endblock %}
