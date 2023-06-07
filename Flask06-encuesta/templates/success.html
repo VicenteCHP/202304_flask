@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+Results
+{% endblock %}
+
+{% block content %}
+<h1>Resultados</h1>
+<body>
+    <div class="card mx-auto col-6 bg-dark text-primary">
+        <h1 class="card-title">Survey Results</h1>
+        <p class="card-text">Name: {{ session['name'] }}</p>
+        <p class="card-text">Dojo Location: {{ session['location'] }}</p>
+        <p class="card-text">Favorite Language: {{ session['language'] }}</p>
+        <p class="card-text">Comments: {{ session['comments'] }}</p>
+    </div>
+</body>
+{% endblock %}
